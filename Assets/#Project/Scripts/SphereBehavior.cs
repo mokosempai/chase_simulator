@@ -21,4 +21,10 @@ public class SphereBehavior : MonoBehaviour
         agent.SetDestination(target.position);
         
     }
+
+    void OnTriggerEnter(Collider other){
+    if(other.CompareTag("Player")){
+        Debug.Log("Player was touched by the sphere.", other.gameObject);
+    }
+    }
 }
